@@ -165,3 +165,7 @@ console.log(obj.hasOwnProperty("hello")); //true
  */
 const obj1 = { a: "one", b: "two", a: "repeat" };
 console.log(obj1); //{a: 'repeat', b: 'two'}
+
+/**
+ * 16
+ */
