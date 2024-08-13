@@ -168,4 +168,37 @@ console.log(obj1); //{a: 'repeat', b: 'two'}
 
 /**
  * 16
+ * 1
+ * 2
+ * 4
  */
+
+for (let i = 1; i < 5; i++) {
+  if (i == 3) continue;
+  console.log(i);
+}
+
+/**
+ * 17
+ * first
+ * third
+ * second
+ */
+
+const foo = () => console.log("first");
+const bar = () => setTimeout(() => console.log("second"));
+const baz = () => console.log("third");
+
+bar();
+foo();
+baz();
+
+/**
+ * 18
+ */
+
+<div onclick="console.log(`first div`)">
+  <div onclick="console.log(`second div`)">
+    <button onclick="console.log(`button`)">click!</button>;
+  </div>
+</div>;
