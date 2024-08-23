@@ -146,3 +146,21 @@ person.hello.call(otherName, "world");
 person.hello.apply(otherName, ["world"]);
 const newBind = person.hello.bind(otherName);
 newBind("world");
+
+/**
+ * closure:
+ * is the combination of functions bind together with its
+ * lexical scope
+ * it form a closure
+ */
+
+function x() {
+  var a = 7;
+  function y() {
+    console.log(a);
+  }
+  y();
+}
+
+x();
+
