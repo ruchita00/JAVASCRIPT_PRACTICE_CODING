@@ -1,3 +1,4 @@
+"use strict";
 /**
  * what is promise
  * promise is object representation of eventually success or failed
@@ -164,3 +165,43 @@ function x() {
 
 x();
 
+/** this
+ * this is work differently with this keywords
+ *
+ * this in global space
+ *
+ * this inside a function
+ *
+ */
+this;
+console.log(this); //window
+//this keyword in global space represent global object
+
+function x() {
+  //this
+  console.log(this);
+  //with strict mode --undefined
+  //without strict mode - window
+  //this substitution: if the value of this is undefined or null
+  //
+
+  /** this will be replace with global object only in
+   * non strict mode
+   *
+   */
+}
+x();
+/**
+ * the value of this depends on how this is called
+ *
+ * in the arrow functions
+ * the value of this is window obj
+ * but in normal function the value of this is reference to
+ * nearest obj
+ *
+ * in bind it sharing methods
+ */
+
+/**
+ * in the
+ */
