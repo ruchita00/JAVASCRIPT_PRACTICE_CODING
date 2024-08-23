@@ -72,3 +72,77 @@ let dev2 = structuredClone(dev1);
 dev2.name = "abcdcjn";
 dev2.skills.primary = "raect";
 console.log(dev2);
+
+// polyfill for map
+
+Array.prototype.myMap = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    temp.push(cb(this[i], i, this));
+  }
+  return temp;
+};
+
+Array.prototype.myFilter = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i], i, this)) {
+      temp.push(this[i]);
+    }
+  }
+  return temp;
+};
+
+Array.prototype.myReduce = function (cb, initialValue) {
+  let accumulator = initialValue;
+  for (let i = 0; i < this.length; i++) {
+    accumulator = accumulator ? cb(accumulator, this[i], i, this) : this[i];
+  }
+  return accumulator;
+};
+
+/**
+ * What is a service worker
+ * 
+ * A Service worker is basically a script (JavaScript file) 
+ * that runs in the background, separate from a web page and
+ *  provides features that don't need a web page or user
+ *  interaction. Some of the major features of service workers 
+ * are Rich offline experiences(offline first web application 
+ * development), periodic background syncs, push notifications,
+ *  intercept and handle network requests and programmatically
+ *  managing a cache of responses.
+
+
+ *  */
+
+/**
+ * call apply and bind
+ *
+ * are methods available on functions that control execution
+ * context and augrement of the function
+ *
+ * call: invoke the function with specifies this context and pass
+ * individual argument
+ *
+ * apply : invoke the function with specifies this context
+ * and pass argumnets individually
+ *
+ * bind: create a new function with specifies this context
+ * and optionally predefined argument
+ */
+
+var person = {
+  name: "ruchi",
+  hello: function (thing) {
+    console.log(this.name + " say hello" + thing);
+  },
+};
+var otherName = {
+  name: "tina",
+};
+
+person.hello.call(otherName, "world");
+person.hello.apply(otherName, ["world"]);
+const newBind = person.hello.bind(otherName);
+newBind("world");
