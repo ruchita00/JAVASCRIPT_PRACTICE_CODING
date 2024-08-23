@@ -57,6 +57,7 @@ const newa = [1, 2, 3, 4, 5];
 const { secondLarge, secondSmall } = findSecondSmallSecondLarge(newa);
 console.log(secondLarge, secondSmall);
 
+/**3 findOccurance */
 const findOccurance = (str) => {
   let exist = {};
   for (let i = 0; i < str.length; i++) {
@@ -73,3 +74,22 @@ const findOccurance = (str) => {
 const str = "ruchita sagalgile";
 
 console.log(findOccurance(str));
+
+/**4 flat arr */
+function flatternArr(arr) {
+  let result = [];
+  function flattern(subArr) {
+    for (let i = 0; i < subArr.length; i++) {
+      if (Array.isArray(subArr[i])) {
+        flattern(subArr[i]);
+      } else {
+        result.push(subArr[i]);
+      }
+    }
+  }
+  flattern(arr);
+  return result;
+}
+const nestedArray = [1, [2, [3, 4], 5], 6, [7, 8]];
+const flatArr = flatternArr(nestedArray);
+console.log(flatArr);
