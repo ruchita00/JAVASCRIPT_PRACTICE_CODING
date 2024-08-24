@@ -169,3 +169,16 @@ const objsss = deepFreeze({ a: 1, b: { c: 2 } });
 // obj.b = 3; // Doesn't add new property
 
 // console.log(obj); // { a: 1 }
+
+//asking in interview
+const newObjjj = { 10: "11", 11: "19", 12: "3" };
+
+let sum = 0;
+for (let key in newObjjj) {
+  const numKey = +key;
+  const numValue = +newObjjj[key];
+  if (numKey > 10 && numValue > 10) {
+    sum += numValue;
+  }
+}
+console.log(sum);
