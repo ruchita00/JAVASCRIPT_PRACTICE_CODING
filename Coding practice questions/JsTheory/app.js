@@ -205,3 +205,20 @@ x();
 /**
  * in the
  */
+
+/**
+ * - How rendering works in the browser.
+ *
+ * rendering in broswer involves serveral steps to convert raw
+ * html,css and js into visual representation that user can interact
+ * with
+ *
+ * 1. rendering in the browser invloves
+ * parsing html to build the dom,
+ * parsing css to build to cssom
+ * and then these to create the render tree
+ * which is used to compute layouts and paints
+ * the content to the screen.
+ * js can dynamically modify the dom and cssom
+ * potentially triggering reflows and repaints
+ */
