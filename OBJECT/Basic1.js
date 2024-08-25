@@ -115,3 +115,25 @@ const obj11B = {
 };
 
 console.log(deepCompare(obj11A, obj11B)); //true
+
+const objexa = { 10: "11", 11: "19", 11: "21" };
+let sum = 0;
+
+for (let key in objexa) {
+  const newKey = +key;
+  const newValue = +objexa[key];
+
+  if (newValue > 10 && newKey > 10) {
+    sum += newValue;
+  }
+}
+
+for (let key in objexa) {
+  const newKey = parseInt(key);
+  const newValue = parseInt(objexa[key]);
+
+  if (newValue > 10 && newKey > 10) {
+    sum += newValue;
+  }
+}
+console.log(sum);
