@@ -223,3 +223,62 @@ x();
  * potentially triggering reflows and repaints
  */
 
+const multipArgFunction = (a, b, c) => a + b + c;
+
+console.log(multipArgFunction(1, 2, 3)); //6
+
+const curryUnaryFunction = (a) => (b) => (c) => a + b + c;
+
+curryUnaryFunction(1); // b=>c-> 1+b+c
+curryUnaryFunction(1)(2); // c= 3+c
+curryUnaryFunction(1)(2)(3); //6
+
+/**
+ * what is the difference between spread oprator and rest opertaor
+ *
+ * rest operator collects all remaining element into an array
+ * whereas spread operator allows to iterares array /objects/
+ * string to be exapned into single argumnet/element ele rest
+ * parameneter is opposite to the spread operator
+ */
+
+/**
+ * whast is pass by reference and pass by value
+ *
+ * pass by value creates a new space in the memory and make
+ *  a copy of value.primitive such as string number boolean etc
+ * will actually create a new copy hemce updating one value
+ * donesnt impack the other value
+ * the value are independent of each other
+ *
+ *
+ */
+let a = 10;
+let b = a;
+
+b++;
+console.log("a", a, "b", b);
+
+/**
+ *  in the above code snippet the value of a is assigned to b
+ * and the valriable b has incremented since there is a new
+ * space created for variable b any update on this variable
+ * doesnt impact the variable a
+ *
+ *
+ * pass by refernce doesnt create a new space in memory but the
+ * new variable dopts a memory address of an initial variable
+ * non primitive such as objects array functions gets the refernce
+ * ofthe initial varaible
+ * ie updateing one value will impact the other variable
+ *
+ */
+
+let user1 = {
+  name: "ruch",
+  age: 26,
+};
+let user2 = user1;
+user2.name = "carol";
+
+console.log(user1.name, user2.name); //carol carol
