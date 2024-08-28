@@ -282,3 +282,8 @@ let user2 = user1;
 user2.name = "carol";
 
 console.log(user1.name, user2.name); //carol carol
+
+// Shallow Copy: Copies an object but maintains references to nested objects, meaning changes to those
+// nested objects affect both the original and the copy.
+// Deep Copy: Copies an object and all of its nested objects, creating a fully independent copy.
+//Changes to the copy do not affect the original.
