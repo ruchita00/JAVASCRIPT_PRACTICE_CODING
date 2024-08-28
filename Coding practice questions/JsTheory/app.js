@@ -287,3 +287,6 @@ console.log(user1.name, user2.name); //carol carol
 // nested objects affect both the original and the copy.
 // Deep Copy: Copies an object and all of its nested objects, creating a fully independent copy.
 //Changes to the copy do not affect the original.
+
+//in deep copy its na independednt object any change made in deep copy it not relect to orignial arr
+//in shallow copy any changes made it reflect to original arr
