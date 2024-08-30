@@ -99,13 +99,13 @@ const findMinMax = (arr) => {
 };
 console.log(findMinMax(arrNumber));
 
-const arrayNew = [1, 2, 3, 4, 5, 6, 9, 10];
+ arrayNew = [1, 2, 3, 4, 5, 6, 9, 10];
 
 const missing = [1, 2, 3, 7, 8, 9];
 const missingArr = [];
 const missingValue = (arr) => {
   let minValue = Math.min(...arr);
-  let maxValue = Math.max(...arr);
+  let maxValue = Maconstth.max(...arr);
   for (let i = minValue; i < maxValue; i++) {
     if (arr.indexOf(i) < 0) {
       missingArr.push(i);

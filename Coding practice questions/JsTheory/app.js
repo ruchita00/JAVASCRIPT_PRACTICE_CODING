@@ -210,7 +210,8 @@ x();
  * - How rendering works in the browser.
  *
  * rendering in broswer involves serveral steps to convert raw
- * html,css and js into visual representation that user can interact
+ * html,css and js into visual representation that user can 
+ * //interact
  * with
  *
  * 1. rendering in the browser invloves
